@@ -1,7 +1,7 @@
 ﻿
 #Remove-Item -path "fichier.txt" -force
 
-$file = "fichier.txt"
+$file = "C:\Users\fengj\Desktop\Powershell\Script_Payload\fichier.txt"
 
 
 
