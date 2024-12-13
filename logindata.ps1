@@ -28,7 +28,7 @@ Function Search-crendentials {
 
 Search-crendentials
 
-Get-Content -path $file -raw
+
 
 
 		
