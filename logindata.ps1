@@ -2,7 +2,7 @@
 #Remove-Item -path "fichier.txt" -force
 
 
-$file = "C:\Users\fengj\Desktop\Powershell\Script_Payload\fichier.txt"
+$file = "$env:USERPROFILE\fichier.txt"
 
 
 Function Search-crendentials { 
